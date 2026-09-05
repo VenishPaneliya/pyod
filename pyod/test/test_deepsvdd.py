@@ -296,6 +296,8 @@ class TestDeepSVDD(unittest.TestCase):
 
         assert_equal(len(epoch_lines(0)), 0)
         assert_equal(len(epoch_lines(1)), 3)
+        # a higher verbosity must not be quieter than a lower one
+        assert_equal(len(epoch_lines(2)), 3)
 
     def tearDown(self):
         pass

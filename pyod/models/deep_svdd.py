@@ -426,7 +426,7 @@ class DeepSVDD(BaseDetector):
                 # place and leave the final weights here instead of the best
                 # ones. Copy it.
                 best_model_dict = copy.deepcopy(self.model_.state_dict())
-            if self.verbose == 1:
+            if self.verbose >= 1:
                 print(f"Epoch {epoch + 1}/{self.epochs}, Loss: {epoch_loss}")
         self.best_model_dict = best_model_dict
         if self.best_model_dict is not None:
